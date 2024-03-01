@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo Formulário</title>
+    <link lang="stylesheet" href="style.css" />
+</head>
+
+<body style="background-color:blueviolet;">    
+    <form action="cadastro.html" method="post">
+        <fieldset>
+            <legend>Cadastro da Pessoa</legend>
+            <div class="container">
+                <label for="nome">Nome</label>
+                <input id="nome" type="text" name="nome" required />
+            </div>
+
+            <div>
+                <label for="cpf">CPF</label>
+                <input id="cpf" type="text" name="cpf" />
+            </div>
+
+            <div>
+                <label for="email">Email</label>
+                <input id="email" type="email" name="email" required />
+            </div>
+
+            <div>
+                <label for="dataNascimento">Data de Nascimento</label>
+                <input id="dataNascimento" type="date" name="dataNascimento" />
+            </div>
+
+            <div>
+                <label for="altura">Altura</label>
+                <input 
+                    id="altura" 
+                    type="number" 
+                    step="0.01" 
+                    min="0" 
+                    max="3" 
+                    name="altura" />
+            </div>
+
+            <div>
+                <label for="corCabelo">Cor do cabelo</label>
+                <input id="corCabelo" type="color" name="corCabelo" />
+            </div>
+
+            <div>
+                <label>Gosto Musical</label>
+                <label><input type="checkbox" name="gostoMusical" value="rock">Rock</label>
+                <label><input type="checkbox" name="gostoMusical" value="pagode">pagode</label>
+            </div>
+
+            <div>
+                <label>Sexo</label>
+                <label ><input name="sexo" value="feminino" type="radio">feminino</label>
+                <label ><input name="sexo" value="masculino" type="radio">masculino</label>
+            </div>
+
+            <div>
+                <label for="documento">Upload do documento</label>
+                <input id="documento" type="file" name="documento" />
+            </div>
+
+            <div>
+                <label for="cidade">Cidade</label>
+                <select id="cidade" name="cidade">
+                    <option value="São Paulo">São Paulo</option>
+                    <option value="Rio de janeiro">Rio de Janeiro</option>
+                    <option value="Belo Horizonte">Belo Horizonte</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="estado">Estado</label>
+                <input list="estado" name="estado"/>
+                <datalist id="estado">
+                    <option value="São Paulo"></option>
+                    <option value="Rio de Janeiro"></option>
+                    <option value="Minas Gerais"></option>
+                    <option value="Rio Grande do Sul"></option>
+                </datalist>
+            </div>
+            <div>
+                <button type="submit">Salvar</button>
+                <button type="reset">Limpar</button>
+            </div>
+        </fieldset>
+    </form>
+</body>
+
+</html>
